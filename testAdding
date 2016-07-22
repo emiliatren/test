@@ -1,0 +1,1886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/DigitalFormsService/af/default"
+        cq:deviceGroups="/etc/mobile/groups/responsive"
+        cq:lastModified="{Date}2016-07-20T10:40:08.929Z"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/DigitalFormsService/templates/HMRCTemplate"
+        jcr:language="en"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Partner's repayment claim"
+        sling:resourceType="/apps/DigitalFormsService/components/page/HMRCTemplate">
+        <guideformtitle
+            jcr:lastModified="{Date}2016-06-28T12:14:59.500Z"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideformtitle"
+            text="&lt;p>Partner's repayment claim&lt;/p>&#xa;"
+            textIsRich="true"/>
+        <guideContainer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="fd/af/components/guideContainer"
+            actionType="/libs/fd/af/components/guidesubmittype/store"
+            clientLibRef="guide.hmrc.validation.libs"
+            guideCss="guideContainer"
+            guideNodeClass="guideContainerNode"
+            name="guide1"
+            xsdRef="/assets/xsdRef.xsd"
+            xsdRootElement="form">
+            <layout
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="/libs/fd/af/layouts/defaultGuideLayout"
+                mobileLayout="/apps/DigitalFormsService/layouts/mobile/HMRCwizardMobile"
+                toolbarPosition="Bottom"/>
+            <rootPanel
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="fd/af/components/rootPanel"
+                completionExp="window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpression)"
+                completionExpReq="{Boolean}true"
+                guideNodeClass="rootPanelNode"
+                initScript="initialiseForm();"
+                name="guideRootPanel"
+                panelSetType="Navigable">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="/apps/DigitalFormsService/layouts/panel/HMRCwizard"
+                    enableLayoutOptimization="{Boolean}true"
+                    guideNavigatorTab="wizard-tab"
+                    toolbarPosition="Bottom"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <page1
+                        jcr:lastModified="{Date}2016-06-21T10:09:10.576Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Your details"
+                        sling:resourceType="fd/af/components/panel"
+                        bindRef="/data/yourDetails"
+                        guideNodeClass="guidePanel"
+                        name="yourDetails">
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <heading1
+                                jcr:lastModified="{Date}2016-06-21T09:51:51.123Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/Heading1"
+                                _value="&lt;h1>Your details&lt;/h1>&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="heading_textdraw"/>
+                            <textbox
+                                jcr:created="{Date}2016-06-21T09:52:07.950Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-07-15T10:11:58.981Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="First name"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                bindRef="/data/yourDetails/textbox_FirstName"
+                                fieldLength="longField"
+                                guideNodeClass="guideTextBox"
+                                keyboard="text"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter your first name&quot;},{&quot;validateExpression&quot;:&quot;defaultValidation(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;First name can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;First name can't be more than 100 characters&quot;}]"
+                                name="textbox_FirstName"
+                                templateChooser="firstnametemplate"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),defaultValidation(this),!isCharLimitReached(this\,100)]"
+                                validateExpressionMessage="[Enter your first name,First name can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes,First name can't be more than 100 characters]"/>
+                            <textbox_1981984721
+                                jcr:created="{Date}2016-06-21T09:52:31.577Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-07-15T10:23:19.938Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Last name"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                bindRef="/data/yourDetails/textbox_lastName"
+                                fieldLength="longField"
+                                guideNodeClass="guideTextBox"
+                                keyboard="text"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter your last name&quot;},{&quot;validateExpression&quot;:&quot;defaultValidation(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Last name can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Last name can't be more than 100 characters&quot;}]"
+                                name="textbox_lastName"
+                                templateChooser="lastnametemplate"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),defaultValidation(this),!isCharLimitReached(this\,100)]"
+                                validateExpressionMessage="[Enter your last name,Last name can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes,Last name can't be more than 100 characters]"/>
+                            <textbox_378526526
+                                jcr:created="{Date}2016-06-21T09:52:55.529Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-06-27T08:17:15.676Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Date of birth"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                bindRef="/data/yourDetails/textbox_DOB"
+                                fieldLength="shortLength"
+                                guideNodeClass="guideTextBox"
+                                hintText="For example 20/03/1976"
+                                keyboard="date"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter your date of birth&quot;},{&quot;validateExpression&quot;:&quot;isDate(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter a valid date of birth&quot;},{&quot;validateExpression&quot;:&quot;isDateInPast(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Date of birth must be in the past&quot;}]"
+                                name="textbox_DOB"
+                                templateChooser="dateofbirthtemplate"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),isDate(this),isDateInPast(this)]"
+                                validateExpressionMessage="[Enter your date of birth,Enter a valid date of birth,Date of birth must be in the past]"/>
+                            <addresschooser
+                                jcr:created="{Date}2016-06-21T13:46:07.078Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-06-21T13:46:07.078Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/AddressChooser"
+                                bindRef="/data/yourDetails/addresschooser1466516767253"
+                                guideNodeClass="guidePanel"
+                                name="addresschooser1466516767253">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    nonNavigable="true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <radiobutton
+                                        jcr:created="{Date}2015-04-21T15:23:46.963+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2016-06-27T10:01:33.948Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Is your address in the UK?"
+                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/RadioButton"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/data/yourDetails/addresschooser1466516767253/isThisInTheUK"
+                                        css="widget_XfaHMRCCheckbox"
+                                        cssClassName="widget_XfaHMRCCheckbox"
+                                        guideNodeClass="guideRadioButton"
+                                        multiValidation="\{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;,&quot;validateExpressionMessage&quot;:&quot;Select yes if your address is in the UK&quot;}"
+                                        name="isThisInTheUK"
+                                        options="[0=Yes,1=No]"
+                                        validateExp="runMultipleValidations(this)"
+                                        validateExpression="[isNotEmpty(this)]"
+                                        validateExpressionMessage="[Select yes if your address is in the UK]"/>
+                                    <addressuk
+                                        jcr:created="{Date}2015-04-21T15:25:03.634+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2015-04-21T15:25:45.842+01:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/AddressUK"
+                                        bindRef="/data/yourDetails/addresschooser1466516767253/block_addressuk"
+                                        guideNodeClass="guidePanel"
+                                        name="block_addressuk"
+                                        visibleExp="isThisInTheUK.value == &quot;0&quot;">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            nonNavigable="true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <heading
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/BodyText"
+                                                _value="&lt;h2>UK address&lt;/h2>"
+                                                css="miscHeading"
+                                                guideNodeClass="guideTextDraw"
+                                                name="block_heading_addressUK">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </heading>
+                                            <buildingAndStreet
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2016-06-28T12:41:25.993Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Property number or name, and street"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/yourDetails/addresschooser1466516767253/block_addressuk/@noLabel_noLink_buildingAndStreet"
+                                                fieldLength="longField"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the property number or name\, and street&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Property number or name\, and street can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Property number or name\, and street can't be more than 100 characters&quot;}]"
+                                                name="noLabel_noLink_buildingAndStreet"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,100)]"
+                                                validateExpressionMessage="[Enter the property number or name\, and street,Property number or name\, and street can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Property number or name\, and street can't be more than 100 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </buildingAndStreet>
+                                            <townOrCity
+                                                jcr:lastModified="{Date}2016-06-28T12:41:39.882Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Town or city"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/yourDetails/addresschooser1466516767253/block_addressuk/@noLabel_noLink_postTown"
+                                                fieldLength="mediumLength"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the town or city&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Town or city can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Town or city can't be more than 100 characters&quot;}]"
+                                                name="noLabel_noLink_postTown"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,100)]"
+                                                validateExpressionMessage="[Enter the town or city,Town or city can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Town or city can't be more than 100 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </townOrCity>
+                                            <countyField
+                                                jcr:lastModified="{Date}2016-06-28T12:41:55.846Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="County (optional)"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/yourDetails/addresschooser1466516767253/block_addressuk/@noLabel_noLink_county"
+                                                fieldLength="mediumLength"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;County can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;County can't be more than 100 characters&quot;}]"
+                                                name="noLabel_noLink_county"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isAddressLine(this),!isCharLimitReached(this\,100)]"
+                                                validateExpressionMessage="[County can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),County can't be more than 100 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </countyField>
+                                            <postcode
+                                                jcr:lastModified="{Date}2015-10-09T13:15:42.368+01:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Postcode"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/yourDetails/addresschooser1466516767253/block_addressuk/@noLabel_noLink_postcode"
+                                                css="upperCaseText"
+                                                fieldLength="shortLength"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the postcode&quot;},{&quot;validateExpression&quot;:&quot;isPostcode(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter a valid UK postcode&quot;}]"
+                                                name="noLabel_noLink_postcode"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isPostcode(this)]"
+                                                validateExpressionMessage="[Enter the postcode,Enter a valid UK postcode]"
+                                                valueCommitScript="upperCaseField(this)">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </postcode>
+                                        </items>
+                                    </addressuk>
+                                    <addressinternational
+                                        jcr:created="{Date}2015-04-21T15:25:14.305+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2015-04-21T15:25:52.950+01:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/AddressInternational"
+                                        bindRef="/data/yourDetails/addresschooser1466516767253/block_addressinternational"
+                                        guideNodeClass="guidePanel"
+                                        name="block_addressinternational"
+                                        visibleExp="isThisInTheUK.value == &quot;1&quot;">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            nonNavigable="true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <heading
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/BodyText"
+                                                _value="&lt;h2>International address&lt;/h2>"
+                                                css="miscHeading"
+                                                guideNodeClass="guideTextDraw"
+                                                name="block_heading_addressInternational">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </heading>
+                                            <addressLine1
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2016-07-11T14:42:00.963Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Address line 1"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/yourDetails/addresschooser1466516767253/block_addressinternational/@noLabel_noLink_addressLine1"
+                                                fieldLength="longField"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the first line of the address&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 1 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,27)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 1 can't be more than 27 characters&quot;}]"
+                                                name="noLabel_noLink_addressLine1"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,27)]"
+                                                validateExpressionMessage="[Enter the first line of the address,Address line 1 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Address line 1 can't be more than 27 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </addressLine1>
+                                            <addressLine2
+                                                jcr:lastModified="{Date}2015-10-09T13:16:12.538+01:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Address line 2"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/yourDetails/addresschooser1466516767253/block_addressinternational/@noLabel_noLink_addressLine2"
+                                                fieldLength="longField"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the second line of the address&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 2 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,27)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 2 can't be more than 27 characters&quot;}]"
+                                                name="noLabel_noLink_addressLine2"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,27)]"
+                                                validateExpressionMessage="[Enter the second line of the address,Address line 2 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Address line 2 can't be more than 27 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </addressLine2>
+                                            <addressLine3
+                                                jcr:lastModified="{Date}2015-10-09T13:16:09.320+01:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Address line 3 (optional)"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/yourDetails/addresschooser1466516767253/block_addressinternational/@noLabel_noLink_addressLine3"
+                                                fieldLength="longField"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 3 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,27)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 3 can't be more than 27 characters&quot;}]"
+                                                name="noLabel_noLink_addressLine3"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isAddressLine(this),!isCharLimitReached(this\,27)]"
+                                                validateExpressionMessage="[Address line 3 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Address line 3 can't be more than 27 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </addressLine3>
+                                            <country
+                                                jcr:lastModified="{Date}2015-10-09T13:16:06.531+01:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Country"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/yourDetails/addresschooser1466516767253/block_addressinternational/@noLabel_noLink_country"
+                                                fieldLength="mediumLength"
+                                                guideNodeClass="guideTextBox"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the country&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Country can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,18)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Country can't be more than 18 characters&quot;}]"
+                                                name="noLabel_noLink_country"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,18)]"
+                                                validateExpressionMessage="[Enter the country,Country can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Country can't be more than 18 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </country>
+                                        </items>
+                                    </addressinternational>
+                                </items>
+                            </addresschooser>
+                            <ref_ninumquestion
+                                jcr:created="{Date}2016-06-21T09:54:16.556Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-06-21T09:54:16.556Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="National Insurance number"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/fixedComponents/Ref-NiNumQuestion"
+                                assistPriority="custom"
+                                bindRef="/data/yourDetails/ref_ninumquestion1466502856676"
+                                css="upperCaseText"
+                                fieldLength="shortLength"
+                                guideNodeClass="guideTextBox"
+                                hintText="This is 2 letters followed by 6 numbers and 1 letter, like QQ123456A. You can find this on your payslip, P60 or tax return."
+                                keyboard="text"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter your National Insurance number&quot;},{&quot;validateExpression&quot;:&quot;isNino(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter a valid National Insurance number&quot;}]"
+                                name="ref_ninumquestion1466502856676"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),isNino(this)]"
+                                validateExpressionMessage="[Enter your National Insurance number,Enter a valid National Insurance number]"
+                                valueCommitScript="upperCaseField(this)"/>
+                            <radiobutton
+                                jcr:created="{Date}2016-06-21T09:54:43.258Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-07-11T10:24:05.262Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Are you married or in a civil partnership?"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/RadioButton"
+                                alignment="guideFieldHorizontalAlignment"
+                                bindRef="/data/yourDetails/radiobutton_marriedOrCivilPartnership"
+                                css="widget_XfaHMRCCheckbox"
+                                cssClassName="widget_XfaHMRCCheckbox"
+                                guideNodeClass="guideRadioButton"
+                                multiValidation="\{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;,&quot;validateExpressionMessage&quot;:&quot;Select yes if you are married or in a civil partnership&quot;}"
+                                name="radiobutton_marriedOrCivilPartnership"
+                                options="[0=Yes,1=No]"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this)]"
+                                validateExpressionMessage="[Select yes if you are married or in a civil partnership]"/>
+                            <textbox_1886667478
+                                jcr:created="{Date}2016-06-21T09:55:50.554Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-07-11T13:26:45.459Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Your partner's date of birth"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                bindRef="/data/yourDetails/textbox_yourHusbandWifeDOB"
+                                fieldLength="shortLength"
+                                guideNodeClass="guideTextBox"
+                                hintText="For example 20/03/1976"
+                                keyboard="date"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter your partner's date of birth&quot;},{&quot;validateExpression&quot;:&quot;isDate(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter a valid date of birth for your partner&quot;},{&quot;validateExpression&quot;:&quot;isDateInPast(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Date of birth of your partner must be in the past&quot;}]"
+                                name="textbox_yourHusbandWifeDOB"
+                                templateChooser="dateofbirthtemplate"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),isDate(this),isDateInPast(this)]"
+                                validateExpressionMessage="[Enter your partner's date of birth,Enter a valid date of birth for your partner,Date of birth of your partner must be in the past]"
+                                visibleExp="radiobutton_marriedOrCivilPartnership.value==0"/>
+                            <textbox_617534721
+                                jcr:created="{Date}2016-06-21T09:53:39.836Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-07-15T10:30:51.452Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Partnership tax reference number"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                bindRef="/data/yourDetails/textbox_partnershipTaxRefNum"
+                                fieldLength="mediumLength"
+                                guideNodeClass="guideTextBox"
+                                hintText="This is a 10 digits reference number"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter partnership tax reference number&quot;},{&quot;validateExpression&quot;:&quot;isNumeric(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Partnership tax reference number can only contain whole numbers&quot;},{&quot;validateExpression&quot;:&quot;isCharLengthExactly(this\,10)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Partnership tax reference number must be 10 numbers&quot;}]"
+                                name="textbox_partnershipTaxRefNum"
+                                templateChooser="numerictemplate"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),isNumeric(this),isCharLengthExactly(this\,10)]"
+                                validateExpressionMessage="[Enter partnership tax reference number,Partnership tax reference number can only contain whole numbers,Partnership tax reference number must be 10 numbers]"/>
+                            <textbox_581043400
+                                jcr:created="{Date}2016-06-21T10:08:51.524Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-06-27T08:19:18.111Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Telephone number"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                bindRef="/data/yourDetails/textbox_5810434001466503731614"
+                                fieldLength="longField"
+                                guideNodeClass="guideTextBox"
+                                hintText="If this is a UK landline or an overseas number, you must include the area or dialling code."
+                                keyboard="number"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter your telephone number&quot;},{&quot;validateExpression&quot;:&quot;isTelephone(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter a valid telephone number&quot;}]"
+                                name="textbox_5810434001466503731614"
+                                templateChooser="telephonetemplate"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),isTelephone(this)]"
+                                validateExpressionMessage="[Enter your telephone number,Enter a valid telephone number]"/>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="1"
+                            nonNavigable="true"
+                            toolbarPosition="Bottom"/>
+                    </page1>
+                    <page2
+                        jcr:lastModified="{Date}2016-06-21T10:11:48.503Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Details of the claim"
+                        sling:resourceType="fd/af/components/panel"
+                        bindRef="/data/detailClaim"
+                        guideNodeClass="guidePanel"
+                        name="detailClaim">
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <heading1
+                                jcr:lastModified="{Date}2016-06-21T10:11:31.227Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/Heading1"
+                                _value="&lt;h1>Details of the claim&lt;/h1>&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="heading_textdraw"/>
+                            <radiobutton
+                                jcr:created="{Date}2016-06-21T10:31:37.483Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-07-12T08:34:45.449Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Has the business ceased?"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/RadioButton"
+                                alignment="guideFieldHorizontalAlignment"
+                                bindRef="/data/detailClaim/radiobutton_businessCeased"
+                                css="widget_XfaHMRCCheckbox"
+                                cssClassName="widget_XfaHMRCCheckbox"
+                                guideNodeClass="guideRadioButton"
+                                multiValidation="\{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;,&quot;validateExpressionMessage&quot;:&quot;Select yes if the business has ceased&quot;}"
+                                name="radiobutton_businessCeased"
+                                options="[0=Yes,1=No]"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this)]"
+                                validateExpressionMessage="[Select yes if the business has ceased]"/>
+                            <datetextbox
+                                jcr:created="{Date}2016-06-21T10:32:46.506Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-07-20T10:40:08.901Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Date the partnership ceased or the accounting period of the partnership ended"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/DateTextBox"
+                                bindRef="/data/detailClaim/datetextbox_ceased"
+                                fieldLength="shortLength"
+                                guideNodeClass="guideTextBox"
+                                hintText="Date must fall between 6 April 2016 and now. For example 20/06/2016"
+                                initScript="customjs.date = new Date(); customjs.date.year = customjs.date.getFullYear();"
+                                keyboard="date"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the date the partnership ceased or the date the accounting period of the partnership ended&quot;},{&quot;validateExpression&quot;:&quot;isDate(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter a valid date for when the partnership ceased or for when the accounting period of the partnership ended&quot;},{&quot;validateExpression&quot;:&quot;isDateInPast(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Date for when the partnership ceased or for when the accounting period of the partnership ended must be in the past&quot;},{&quot;validateExpression&quot;:&quot;dateLaterThanOrEqualField(this\,{\\&quot;value\\&quot;:\\&quot;06/04/\\&quot;+customjs.date.year})&quot;\,&quot;validateExpressionMessage&quot;:&quot;Date for when the partnership ceased or for when the accounting period of the partnership ended must be between 6 April and now&quot;}]"
+                                name="datetextbox_ceased"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),isDate(this),isDateInPast(this),dateLaterThanOrEqualField(this\,{&quot;value&quot;:&quot;06/04/&quot;+customjs.date.year})]"
+                                validateExpressionMessage="[Enter the date the partnership ceased or the date the accounting period of the partnership ended,Enter a valid date for when the partnership ceased or for when the accounting period of the partnership ended,Date for when the partnership ceased or for when the accounting period of the partnership ended must be in the past,Date for when the partnership ceased or for when the accounting period of the partnership ended must be between 6 April and now]"
+                                visibleExp="radiobutton_businessCeased.value==0"/>
+                            <textbox
+                                jcr:created="{Date}2016-06-21T12:30:00.716Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-07-11T13:48:06.957Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Gross business income, excluding VAT"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                bindRef="/data/detailClaim/textbox_grossExVAT"
+                                fieldLength="shortLength"
+                                guideNodeClass="guideTextBox"
+                                hintText="This is a number with up to 2 decimal places"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter gross business income\, excluding VAT&quot;},{&quot;validateExpression&quot;:&quot;isNumericDecimal(this\, 2)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Gross business income\, excluding VAT\, can only include a number with up to 2 decimal places&quot;}]"
+                                name="textbox_grossExVAT"
+                                prefix="£"
+                                templateChooser="decimaltemplate"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),isNumericDecimal(this\, 2)]"
+                                validateExpressionMessage="[Enter gross business income\, excluding VAT,Gross business income\, excluding VAT\, can only include a number with up to 2 decimal places]"/>
+                            <textbox_1859864993
+                                jcr:created="{Date}2016-06-21T12:30:46.517Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-07-11T13:48:11.290Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Total allowable business expenses and capital allowances"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                bindRef="/data/detailClaim/textbox_grossAllow"
+                                fieldLength="shortLength"
+                                guideNodeClass="guideTextBox"
+                                hintText="This is a number with up to 2 decimal places"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter total allowable business expenses and capital allowances&quot;},{&quot;validateExpression&quot;:&quot;isNumericDecimal(this\, 2)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Total allowable business expenses and capital allowances can only include a number with up to 2 decimal places&quot;}]"
+                                name="textbox_grossAllow"
+                                prefix="£"
+                                templateChooser="decimaltemplate"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),isNumericDecimal(this\, 2)]"
+                                validateExpressionMessage="[Enter total allowable business expenses and capital allowances,Total allowable business expenses and capital allowances can only include a number with up to 2 decimal places]"/>
+                            <textfieldstatic
+                                jcr:created="{Date}2016-06-23T09:18:31.223Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-07-11T14:37:55.472Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Total net business profit :"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextFieldStatic"
+                                _value="0.00"
+                                assistPriority="custom"
+                                bindRef="/data/detailClaim/hide_textfieldstatic_totalNet"
+                                calcExp="handleNaNValue(textbox_grossExVAT.value) - handleNaNValue(textbox_grossAllow.value).toFixed(2);"
+                                guideNodeClass="guideTextBox"
+                                name="hide_textfieldstatic_totalNet"
+                                prefix="£"/>
+                            <textbox_1545241373
+                                jcr:created="{Date}2016-06-21T12:39:03.847Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-06-27T08:21:57.755Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Total deductions from the payment and deduction statements for the period since 6 April 2016"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                bindRef="/data/detailClaim/textbox_totalDeductionPaymenet"
+                                fieldLength="shortLength"
+                                guideNodeClass="guideTextBox"
+                                hintText="This is a number with up to 2 decimal places"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter total deductions from the payment and deduction statements for the period since 6 April 2016&quot;},{&quot;validateExpression&quot;:&quot;isNumericDecimal(this\, 2)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Total deductions from the payment and deduction statements for the period since 6 April 2016 can only include a number with up to 2 decimal places&quot;}]"
+                                name="textbox_totalDeductionPaymenet"
+                                prefix="£"
+                                templateChooser="decimaltemplate"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),isNumericDecimal(this\, 2)]"
+                                validateExpressionMessage="[Enter total deductions from the payment and deduction statements for the period since 6 April 2016,Total deductions from the payment and deduction statements for the period since 6 April 2016 can only include a number with up to 2 decimal places]"/>
+                            <textbox_1245355073
+                                jcr:created="{Date}2016-07-12T09:32:51.686Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-07-20T10:34:49.050Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="DateAfterValue"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                bindRef="/data/detailClaim/textbox_dateDater"
+                                fieldLength="longField"
+                                guideNodeClass="guideTextBox"
+                                initScript="customjs.date = new Date(); customjs.date.year = customjs.date.getFullYear();  this.value = &quot;06/04/&quot;+customjs.date.year;"
+                                keyboard="text"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter a value into the text box&quot;},{&quot;validateExpression&quot;:&quot;defaultValidation(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Text box can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Text box can't be more than 100 characters&quot;}]"
+                                name="textbox_dateDater"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),defaultValidation(this),!isCharLimitReached(this\,100)]"
+                                validateExpressionMessage="[Enter a value into the text box,Text box can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes,Text box can't be more than 100 characters]"
+                                visibleExp="false"/>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="1"
+                            nonNavigable="true"
+                            toolbarPosition="Bottom"/>
+                    </page2>
+                    <repaymentsSent
+                        jcr:description=""
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Repayments sent"
+                        sling:resourceType="fd/af/components/panel"
+                        bindRef="/data/repaymentsSent"
+                        guideNodeClass="guidePanel"
+                        name="repaymentsSent">
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <radiobutton
+                                jcr:created="{Date}2016-06-23T13:44:31.590Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-06-27T10:08:55.627Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Where do you want any repayment to be sent?"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/RadioButton"
+                                alignment="guideFieldVerticalAlignment"
+                                bindRef="/data/repaymentsSent/radiobutton_repaymentSent"
+                                css="widget_XfaHMRCCheckbox"
+                                cssClassName="widget_XfaHMRCCheckbox"
+                                guideNodeClass="guideRadioButton"
+                                multiValidation="\{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;,&quot;validateExpressionMessage&quot;:&quot;Select where you want any repayment to be sent&quot;}"
+                                name="radiobutton_repaymentSent"
+                                options="[0=By cheque to me at my address,1=Sent to my bank or building society,2=Sent to my nominee by cheque]"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this)]"
+                                validateExpressionMessage="[Select where you want any repayment to be sent]"/>
+                            <bankdetails
+                                jcr:created="{Date}2016-06-23T14:02:50.337Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-06-23T14:04:07.847Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/BankDetails"
+                                bindRef="/data/repaymentsSent/bankdetails"
+                                guideNodeClass="guidePanel"
+                                name="bankdetails"
+                                visibleExp="radiobutton_repaymentSent.value==1">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    nonNavigable="true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <heading
+                                        jcr:created="{Date}2015-06-15T10:34:38.727+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2015-06-15T10:35:45.033+01:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/Heading2"
+                                        _value="&lt;h2>Bank or building society details&lt;/h2>"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw"/>
+                                    <bankName
+                                        jcr:created="{Date}2015-06-15T10:34:48.679+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2016-06-27T08:44:59.727Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Bank or building society name"
+                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                        bindRef="/data/repaymentsSent/bankdetails/@bankOrBuildingSocietyName"
+                                        guideNodeClass="guideTextBox"
+                                        keyboard="text"
+                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter your bank or building society's name&quot;},{&quot;validateExpression&quot;:&quot;defaultValidation(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Bank or building society's name can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Bank or building society's name can't be more than 100 characters&quot;}]"
+                                        name="bankOrBuildingSocietyName"
+                                        validateExp="runMultipleValidations(this)"
+                                        validateExpression="[isNotEmpty(this),defaultValidation(this),!isCharLimitReached(this\,100)]"
+                                        validateExpressionMessage="[Enter your bank or building society's name,Bank or building society's name can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes,Bank or building society's name can't be more than 100 characters]"/>
+                                    <accountHolderName
+                                        jcr:created="{Date}2015-06-15T10:34:56.983+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2016-06-27T08:45:02.756Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Account holder's name"
+                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                        bindRef="/data/repaymentsSent/bankdetails/@accountHoldersName"
+                                        guideNodeClass="guideTextBox"
+                                        keyboard="text"
+                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the account holder's name&quot;},{&quot;validateExpression&quot;:&quot;defaultValidation(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Account holder's name can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Account holder's name can't be more than 100 characters&quot;}]"
+                                        name="accountHoldersName"
+                                        validateExp="runMultipleValidations(this)"
+                                        validateExpression="[isNotEmpty(this),defaultValidation(this),!isCharLimitReached(this\,100)]"
+                                        validateExpressionMessage="[Enter the account holder's name,Account holder's name can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes,Account holder's name can't be more than 100 characters]"/>
+                                    <sortCode
+                                        jcr:created="{Date}2015-06-15T10:35:02.855+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2015-06-15T10:41:09.273+01:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Sort code"
+                                        sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/TextBox"
+                                        bindRef="/data/repaymentsSent/bankdetails/@sortCode"
+                                        fieldLength="longField"
+                                        guideNodeClass="guideTextBox"
+                                        hintText="The sort code is 6 digits, like 123456. Don't include spaces."
+                                        keyboard="number"
+                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the sort code&quot;},{&quot;validateExpression&quot;:&quot;isSortCode(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter a valid sort code&quot;}]"
+                                        name="sortCode"
+                                        validateExp="runMultipleValidations(this)"
+                                        validateExpression="[isNotEmpty(this),isSortCode(this)]"
+                                        validateExpressionMessage="[Enter the sort code,Enter a valid sort code]"/>
+                                    <accountNumber
+                                        jcr:created="{Date}2015-06-15T10:35:10.139+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2016-07-11T10:27:09.980Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Account number of the bank or building society"
+                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                        bindRef="/data/repaymentsSent/bankdetails/@accountNumber"
+                                        fieldLength="mediumLength"
+                                        guideNodeClass="guideTextBox"
+                                        hintText="The account number is 8 digits, like 12345678."
+                                        keyboard="number"
+                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the account number of the bank or building society&quot;},{&quot;validateExpression&quot;:&quot;isBankAccountNumber(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter a valid bank or building society account number&quot;}]"
+                                        name="accountNumber"
+                                        validateExp="runMultipleValidations(this)"
+                                        validateExpression="[isNotEmpty(this),isBankAccountNumber(this)]"
+                                        validateExpressionMessage="[Enter the account number of the bank or building society,Enter a valid bank or building society account number]"/>
+                                </items>
+                            </bankdetails>
+                            <panel
+                                jcr:created="{Date}2016-06-23T14:03:32.253Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-06-23T14:04:00.196Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/panel"
+                                bindRef="/data/repaymentsSent/nomineeDetails"
+                                guideNodeClass="guidePanel"
+                                name="nomineeDetails"
+                                visibleExp="radiobutton_repaymentSent.value==2">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    nonNavigable="true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <textbox
+                                        jcr:created="{Date}2016-06-23T14:04:17.066Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2016-06-27T09:56:31.137Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Full name of nominee"
+                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                        bindRef="/data/repaymentsSent/nomineeDetails/textbox_nomineeFullNAme"
+                                        fieldLength="longField"
+                                        guideNodeClass="guideTextBox"
+                                        keyboard="text"
+                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter full name of nominee&quot;},{&quot;validateExpression&quot;:&quot;defaultValidation(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Full name of nominee can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Full name of nominee can't be more than 100 characters&quot;}]"
+                                        name="textbox_nomineeFullNAme"
+                                        validateExp="runMultipleValidations(this)"
+                                        validateExpression="[isNotEmpty(this),defaultValidation(this),!isCharLimitReached(this\,100)]"
+                                        validateExpressionMessage="[Enter full name of nominee,Full name of nominee can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes,Full name of nominee can't be more than 100 characters]"/>
+                                    <addresschooser
+                                        jcr:created="{Date}2016-06-27T09:59:57.884Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2016-06-27T09:59:57.884Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/AddressChooser"
+                                        bindRef="/data/repaymentsSent/nomineeDetails/addresschooser1467021598184"
+                                        guideNodeClass="guidePanel"
+                                        name="addresschooser1467021598184">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            nonNavigable="true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <radiobutton
+                                                jcr:created="{Date}2015-04-21T15:23:46.963+01:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2016-06-27T10:01:56.321Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Is the nominee's address in the UK?"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/RadioButton"
+                                                alignment="guideFieldHorizontalAlignment"
+                                                bindRef="/data/repaymentsSent/nomineeDetails/addresschooser1467021598184/isThisInTheUK"
+                                                css="widget_XfaHMRCCheckbox"
+                                                cssClassName="widget_XfaHMRCCheckbox"
+                                                guideNodeClass="guideRadioButton"
+                                                multiValidation="\{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;,&quot;validateExpressionMessage&quot;:&quot;Select yes if the nominee's address in the UK&quot;}"
+                                                name="isThisInTheUK"
+                                                options="[0=Yes,1=No]"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this)]"
+                                                validateExpressionMessage="[Select yes if the nominee's address in the UK]"/>
+                                            <addressuk
+                                                jcr:created="{Date}2015-04-21T15:25:03.634+01:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2015-04-21T15:25:45.842+01:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/AddressUK"
+                                                bindRef="/data/repaymentsSent/nomineeDetails/addresschooser1467021598184/block_addressuk"
+                                                guideNodeClass="guidePanel"
+                                                name="block_addressuk"
+                                                visibleExp="isThisInTheUK.value == &quot;0&quot;">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                                    nonNavigable="true"
+                                                    toolbarPosition="Bottom"/>
+                                                <items
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                                    <heading
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/BodyText"
+                                                        _value="&lt;h2>UK address&lt;/h2>"
+                                                        css="miscHeading"
+                                                        guideNodeClass="guideTextDraw"
+                                                        name="block_heading_addressUK">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                                    </heading>
+                                                    <buildingAndStreet
+                                                        jcr:createdBy="admin"
+                                                        jcr:lastModified="{Date}2016-06-28T12:50:51.852Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Property number or name, and street"
+                                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                        assistPriority="custom"
+                                                        bindRef="/data/repaymentsSent/nomineeDetails/addresschooser1467021598184/block_addressuk/@noLabel_noLink_buildingAndStreet"
+                                                        fieldLength="longField"
+                                                        guideNodeClass="guideTextBox"
+                                                        keyboard="text"
+                                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the property number or name\, and street&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Property number or name\, and street can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Property number or name\, and street can't be more than 100 characters&quot;}]"
+                                                        name="noLabel_noLink_buildingAndStreet"
+                                                        validateExp="runMultipleValidations(this)"
+                                                        validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,100)]"
+                                                        validateExpressionMessage="[Enter the property number or name\, and street,Property number or name\, and street can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Property number or name\, and street can't be more than 100 characters]">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                                    </buildingAndStreet>
+                                                    <townOrCity
+                                                        jcr:lastModified="{Date}2016-07-11T10:27:17.450Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Town or city"
+                                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                        assistPriority="custom"
+                                                        bindRef="/data/repaymentsSent/nomineeDetails/addresschooser1467021598184/block_addressuk/@noLabel_noLink_postTown"
+                                                        fieldLength="mediumLength"
+                                                        guideNodeClass="guideTextBox"
+                                                        keyboard="text"
+                                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the town or city&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Town or city can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Town or city can't be more than 100 characters&quot;}]"
+                                                        name="noLabel_noLink_postTown"
+                                                        validateExp="runMultipleValidations(this)"
+                                                        validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,100)]"
+                                                        validateExpressionMessage="[Enter the town or city,Town or city can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Town or city can't be more than 100 characters]">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                                    </townOrCity>
+                                                    <countyField
+                                                        jcr:lastModified="{Date}2016-06-28T12:51:09.936Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="County (optional)"
+                                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                        assistPriority="custom"
+                                                        bindRef="/data/repaymentsSent/nomineeDetails/addresschooser1467021598184/block_addressuk/@noLabel_noLink_county"
+                                                        fieldLength="mediumLength"
+                                                        guideNodeClass="guideTextBox"
+                                                        keyboard="text"
+                                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;County can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;County can't be more than 100 characters&quot;}]"
+                                                        name="noLabel_noLink_county"
+                                                        validateExp="runMultipleValidations(this)"
+                                                        validateExpression="[isAddressLine(this),!isCharLimitReached(this\,100)]"
+                                                        validateExpressionMessage="[County can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),County can't be more than 100 characters]">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                                    </countyField>
+                                                    <postcode
+                                                        jcr:lastModified="{Date}2016-06-27T10:02:04.369Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Postcode"
+                                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                        assistPriority="custom"
+                                                        bindRef="/data/repaymentsSent/nomineeDetails/addresschooser1467021598184/block_addressuk/@noLabel_noLink_postcode"
+                                                        css="upperCaseText"
+                                                        fieldLength="shortLength"
+                                                        guideNodeClass="guideTextBox"
+                                                        keyboard="text"
+                                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the postcode&quot;},{&quot;validateExpression&quot;:&quot;isPostcode(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter a valid UK postcode&quot;}]"
+                                                        name="noLabel_noLink_postcode"
+                                                        validateExp="runMultipleValidations(this)"
+                                                        validateExpression="[isNotEmpty(this),isPostcode(this)]"
+                                                        validateExpressionMessage="[Enter the postcode,Enter a valid UK postcode]"
+                                                        valueCommitScript="upperCaseField(this)">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                                    </postcode>
+                                                </items>
+                                            </addressuk>
+                                            <addressinternational
+                                                jcr:created="{Date}2015-04-21T15:25:14.305+01:00"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2015-04-21T15:25:52.950+01:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/AddressInternational"
+                                                bindRef="/data/repaymentsSent/nomineeDetails/addresschooser1467021598184/block_addressinternational"
+                                                guideNodeClass="guidePanel"
+                                                name="block_addressinternational"
+                                                visibleExp="isThisInTheUK.value == &quot;1&quot;">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                                    nonNavigable="true"
+                                                    toolbarPosition="Bottom"/>
+                                                <items
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                                    <heading
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/BodyText"
+                                                        _value="&lt;h2>International address&lt;/h2>"
+                                                        css="miscHeading"
+                                                        guideNodeClass="guideTextDraw"
+                                                        name="block_heading_addressInternational">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                                    </heading>
+                                                    <addressLine1
+                                                        jcr:createdBy="admin"
+                                                        jcr:lastModified="{Date}2015-10-09T13:16:14.804+01:00"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Address line 1"
+                                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                        assistPriority="custom"
+                                                        bindRef="/data/repaymentsSent/nomineeDetails/addresschooser1467021598184/block_addressinternational/@noLabel_noLink_addressLine1"
+                                                        fieldLength="longField"
+                                                        guideNodeClass="guideTextBox"
+                                                        keyboard="text"
+                                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the first line of the address&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 1 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,27)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 1 can't be more than 27 characters&quot;}]"
+                                                        name="noLabel_noLink_addressLine1"
+                                                        validateExp="runMultipleValidations(this)"
+                                                        validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,27)]"
+                                                        validateExpressionMessage="[Enter the first line of the address,Address line 1 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Address line 1 can't be more than 27 characters]">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                                    </addressLine1>
+                                                    <addressLine2
+                                                        jcr:lastModified="{Date}2015-10-09T13:16:12.538+01:00"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Address line 2"
+                                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                        assistPriority="custom"
+                                                        bindRef="/data/repaymentsSent/nomineeDetails/addresschooser1467021598184/block_addressinternational/@noLabel_noLink_addressLine2"
+                                                        fieldLength="longField"
+                                                        guideNodeClass="guideTextBox"
+                                                        keyboard="text"
+                                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the second line of the address&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 2 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,27)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 2 can't be more than 27 characters&quot;}]"
+                                                        name="noLabel_noLink_addressLine2"
+                                                        validateExp="runMultipleValidations(this)"
+                                                        validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,27)]"
+                                                        validateExpressionMessage="[Enter the second line of the address,Address line 2 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Address line 2 can't be more than 27 characters]">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                                    </addressLine2>
+                                                    <addressLine3
+                                                        jcr:lastModified="{Date}2015-10-09T13:16:09.320+01:00"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Address line 3 (optional)"
+                                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                        assistPriority="custom"
+                                                        bindRef="/data/repaymentsSent/nomineeDetails/addresschooser1467021598184/block_addressinternational/@noLabel_noLink_addressLine3"
+                                                        fieldLength="longField"
+                                                        guideNodeClass="guideTextBox"
+                                                        keyboard="text"
+                                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 3 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,27)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 3 can't be more than 27 characters&quot;}]"
+                                                        name="noLabel_noLink_addressLine3"
+                                                        validateExp="runMultipleValidations(this)"
+                                                        validateExpression="[isAddressLine(this),!isCharLimitReached(this\,27)]"
+                                                        validateExpressionMessage="[Address line 3 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Address line 3 can't be more than 27 characters]">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                                    </addressLine3>
+                                                    <country
+                                                        jcr:lastModified="{Date}2016-06-27T10:02:01.122Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Country"
+                                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                        assistPriority="custom"
+                                                        bindRef="/data/repaymentsSent/nomineeDetails/addresschooser1467021598184/block_addressinternational/@noLabel_noLink_country"
+                                                        fieldLength="mediumLength"
+                                                        guideNodeClass="guideTextBox"
+                                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the country&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Country can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,18)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Country can't be more than 18 characters&quot;}]"
+                                                        name="noLabel_noLink_country"
+                                                        validateExp="runMultipleValidations(this)"
+                                                        validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,18)]"
+                                                        validateExpressionMessage="[Enter the country,Country can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Country can't be more than 18 characters]">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                                    </country>
+                                                </items>
+                                            </addressinternational>
+                                        </items>
+                                    </addresschooser>
+                                    <radiobutton
+                                        jcr:created="{Date}2016-06-27T10:02:26.126Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2016-06-27T10:05:54.068Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Is your agent the nominee?"
+                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/RadioButton"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/data/repaymentsSent/nomineeDetails/radiobutton_agentNominee"
+                                        css="widget_XfaHMRCCheckbox"
+                                        cssClassName="widget_XfaHMRCCheckbox"
+                                        guideNodeClass="guideRadioButton"
+                                        multiValidation="\{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;,&quot;validateExpressionMessage&quot;:&quot;Select yes if your agent is the nominee&quot;}"
+                                        name="radiobutton_agentNominee"
+                                        options="[0=Yes,1=No]"
+                                        validateExp="runMultipleValidations(this)"
+                                        validateExpression="[isNotEmpty(this)]"
+                                        validateExpressionMessage="[Select yes if your agent is the nominee]"/>
+                                    <textbox_960689115
+                                        jcr:created="{Date}2016-06-27T10:05:38.891Z"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2016-06-27T10:06:44.632Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Agent's reference"
+                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                        bindRef="/data/repaymentsSent/nomineeDetails/textbox_agentRef"
+                                        fieldLength="longField"
+                                        guideNodeClass="guideTextBox"
+                                        keyboard="text"
+                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter agent's reference&quot;},{&quot;validateExpression&quot;:&quot;defaultValidation(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Agent's reference can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Agent's reference can't be more than 100 characters&quot;}]"
+                                        name="textbox_agentRef"
+                                        validateExp="runMultipleValidations(this)"
+                                        validateExpression="[isNotEmpty(this),defaultValidation(this),!isCharLimitReached(this\,100)]"
+                                        validateExpressionMessage="[Enter agent's reference,Agent's reference can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes,Agent's reference can't be more than 100 characters]"
+                                        visibleExp="radiobutton_agentNominee.value==0"/>
+                                </items>
+                            </panel>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="1"
+                            nonNavigable="true"
+                            toolbarPosition="Bottom"/>
+                    </repaymentsSent>
+                    <page3
+                        jcr:lastModified="{Date}2016-06-23T09:58:33.971Z"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Statement of Consent by the partnership"
+                        sling:resourceType="fd/af/components/panel"
+                        bindRef="/data/statementConsentPartnership"
+                        guideNodeClass="guidePanel"
+                        name="statementConsentPartnership">
+                        <items
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                            <heading1
+                                jcr:lastModified="{Date}2016-06-22T10:32:57.562Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/Heading1"
+                                _value="&lt;h1>Statement of Consent by the partnership&lt;/h1>&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="heading_textdraw"/>
+                            <bodytext
+                                jcr:created="{Date}2016-06-22T10:33:14.277Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-06-22T10:40:37.290Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/BodyText"
+                                _value="&lt;p>&lt;b>We must have this Statement of Consent signed by all the partners, before we can make any repayment.&lt;/b>&lt;/p>&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw"/>
+                            <textbox
+                                jcr:created="{Date}2016-06-22T10:34:19.842Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-06-27T10:08:49.964Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Full name of the partnership"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                bindRef="/data/statementConsentPartnership/textbox_fullName"
+                                fieldLength="longField"
+                                guideNodeClass="guideTextBox"
+                                keyboard="text"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter full name of the partnership&quot;},{&quot;validateExpression&quot;:&quot;defaultValidation(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Full name of the partnership can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Full name of the partnership can't be more than 100 characters&quot;}]"
+                                name="textbox_fullName"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),defaultValidation(this),!isCharLimitReached(this\,100)]"
+                                validateExpressionMessage="[Enter full name of the partnership,Full name of the partnership can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes,Full name of the partnership can't be more than 100 characters]"/>
+                            <addresschooser
+                                jcr:created="{Date}2016-06-22T10:38:21.159Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-06-22T10:38:21.159Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/AddressChooser"
+                                bindRef="/data/statementConsentPartnership/addresschooser1466591901611"
+                                guideNodeClass="guidePanel"
+                                name="addresschooser1466591901611">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    nonNavigable="true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <radiobutton
+                                        jcr:created="{Date}2015-04-21T15:23:46.963+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2016-06-22T10:39:07.689Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Is the partnership's address in the UK?"
+                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/RadioButton"
+                                        alignment="guideFieldHorizontalAlignment"
+                                        bindRef="/data/statementConsentPartnership/addresschooser1466591901611/isThisInTheUK"
+                                        css="widget_XfaHMRCCheckbox"
+                                        cssClassName="widget_XfaHMRCCheckbox"
+                                        guideNodeClass="guideRadioButton"
+                                        multiValidation="\{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;,&quot;validateExpressionMessage&quot;:&quot;Select yes if the partnership's address is in the UK&quot;}"
+                                        name="isThisInTheUK"
+                                        options="[0=Yes,1=No]"
+                                        validateExp="runMultipleValidations(this)"
+                                        validateExpression="[isNotEmpty(this)]"
+                                        validateExpressionMessage="[Select yes if the partnership's address is in the UK]"/>
+                                    <addressuk
+                                        jcr:created="{Date}2015-04-21T15:25:03.634+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2015-04-21T15:25:45.842+01:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/AddressUK"
+                                        bindRef="/data/statementConsentPartnership/addresschooser1466591901611/block_addressuk"
+                                        guideNodeClass="guidePanel"
+                                        name="block_addressuk"
+                                        visibleExp="isThisInTheUK.value == &quot;0&quot;">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            nonNavigable="true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <heading
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/BodyText"
+                                                _value="&lt;h2>UK address&lt;/h2>"
+                                                css="miscHeading"
+                                                guideNodeClass="guideTextDraw"
+                                                name="block_heading_addressUK">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </heading>
+                                            <buildingAndStreet
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2016-06-27T08:45:20.248Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Property number or name, and street"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/statementConsentPartnership/addresschooser1466591901611/block_addressuk/@noLabel_noLink_buildingAndStreet"
+                                                fieldLength="longField"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the property number or name\, and street&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Property number or name\, and street can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,27)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Property number or name\, and street can't be more than 27 characters&quot;}]"
+                                                name="noLabel_noLink_buildingAndStreet"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,27)]"
+                                                validateExpressionMessage="[Enter the property number or name\, and street,Property number or name\, and street can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Property number or name\, and street can't be more than 27 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </buildingAndStreet>
+                                            <townOrCity
+                                                jcr:lastModified="{Date}2015-10-09T13:15:34.903+01:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Town or city"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/statementConsentPartnership/addresschooser1466591901611/block_addressuk/@noLabel_noLink_postTown"
+                                                fieldLength="mediumLength"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the town or city&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Town or city can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,27)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Town or city can't be more than 27 characters&quot;}]"
+                                                name="noLabel_noLink_postTown"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,27)]"
+                                                validateExpressionMessage="[Enter the town or city,Town or city can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Town or city can't be more than 27 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </townOrCity>
+                                            <countyField
+                                                jcr:lastModified="{Date}2015-10-09T13:15:39.741+01:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="County (optional)"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/statementConsentPartnership/addresschooser1466591901611/block_addressuk/@noLabel_noLink_county"
+                                                fieldLength="mediumLength"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;County can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,27)&quot;\,&quot;validateExpressionMessage&quot;:&quot;County can't be more than 27 characters&quot;}]"
+                                                name="noLabel_noLink_county"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isAddressLine(this),!isCharLimitReached(this\,27)]"
+                                                validateExpressionMessage="[County can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),County can't be more than 27 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </countyField>
+                                            <postcode
+                                                jcr:lastModified="{Date}2015-10-09T13:15:42.368+01:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Postcode"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/statementConsentPartnership/addresschooser1466591901611/block_addressuk/@noLabel_noLink_postcode"
+                                                css="upperCaseText"
+                                                fieldLength="shortLength"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the postcode&quot;},{&quot;validateExpression&quot;:&quot;isPostcode(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter a valid UK postcode&quot;}]"
+                                                name="noLabel_noLink_postcode"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isPostcode(this)]"
+                                                validateExpressionMessage="[Enter the postcode,Enter a valid UK postcode]"
+                                                valueCommitScript="upperCaseField(this)">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </postcode>
+                                        </items>
+                                    </addressuk>
+                                    <addressinternational
+                                        jcr:created="{Date}2015-04-21T15:25:14.305+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2015-04-21T15:25:52.950+01:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/AddressInternational"
+                                        bindRef="/data/statementConsentPartnership/addresschooser1466591901611/block_addressinternational"
+                                        guideNodeClass="guidePanel"
+                                        name="block_addressinternational"
+                                        visibleExp="isThisInTheUK.value == &quot;1&quot;">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            nonNavigable="true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <heading
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/BodyText"
+                                                _value="&lt;h2>International address&lt;/h2>"
+                                                css="miscHeading"
+                                                guideNodeClass="guideTextDraw"
+                                                name="block_heading_addressInternational">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </heading>
+                                            <addressLine1
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2015-10-09T13:16:14.804+01:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Address line 1"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/statementConsentPartnership/addresschooser1466591901611/block_addressinternational/@noLabel_noLink_addressLine1"
+                                                fieldLength="longField"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the first line of the address&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 1 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,27)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 1 can't be more than 27 characters&quot;}]"
+                                                name="noLabel_noLink_addressLine1"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,27)]"
+                                                validateExpressionMessage="[Enter the first line of the address,Address line 1 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Address line 1 can't be more than 27 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </addressLine1>
+                                            <addressLine2
+                                                jcr:lastModified="{Date}2015-10-09T13:16:12.538+01:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Address line 2"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/statementConsentPartnership/addresschooser1466591901611/block_addressinternational/@noLabel_noLink_addressLine2"
+                                                fieldLength="longField"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the second line of the address&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 2 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,27)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 2 can't be more than 27 characters&quot;}]"
+                                                name="noLabel_noLink_addressLine2"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,27)]"
+                                                validateExpressionMessage="[Enter the second line of the address,Address line 2 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Address line 2 can't be more than 27 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </addressLine2>
+                                            <addressLine3
+                                                jcr:lastModified="{Date}2015-10-09T13:16:09.320+01:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Address line 3 (optional)"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/statementConsentPartnership/addresschooser1466591901611/block_addressinternational/@noLabel_noLink_addressLine3"
+                                                fieldLength="longField"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 3 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,27)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Address line 3 can't be more than 27 characters&quot;}]"
+                                                name="noLabel_noLink_addressLine3"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isAddressLine(this),!isCharLimitReached(this\,27)]"
+                                                validateExpressionMessage="[Address line 3 can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Address line 3 can't be more than 27 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </addressLine3>
+                                            <country
+                                                jcr:lastModified="{Date}2015-10-09T13:16:06.531+01:00"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Country"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                assistPriority="custom"
+                                                bindRef="/data/statementConsentPartnership/addresschooser1466591901611/block_addressinternational/@noLabel_noLink_country"
+                                                fieldLength="mediumLength"
+                                                guideNodeClass="guideTextBox"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter the country&quot;},{&quot;validateExpression&quot;:&quot;isAddressLine(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Country can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;)&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,18)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Country can't be more than 18 characters&quot;}]"
+                                                name="noLabel_noLink_country"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isAddressLine(this),!isCharLimitReached(this\,18)]"
+                                                validateExpressionMessage="[Enter the country,Country can only include letters a to z\, numbers\, spaces\, hyphens\, apostrophes\, commas\, forward slashes (/) and ampersands (&amp;),Country can't be more than 18 characters]">
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/libs/fd/af/layouts/gridFluidLayout"/>
+                                            </country>
+                                        </items>
+                                    </addressinternational>
+                                </items>
+                            </addresschooser>
+                            <textbox_1342158738
+                                jcr:created="{Date}2016-06-22T10:40:21.960Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-07-15T10:31:00.027Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Partnership tax reference number"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                bindRef="/data/statementConsentPartnership/textbox_partnershipTaxRefNum"
+                                fieldLength="mediumLength"
+                                guideNodeClass="guideTextBox"
+                                hintText="This is a 10 digits reference number"
+                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter partnership tax reference number&quot;},{&quot;validateExpression&quot;:&quot;isNumeric(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Partnership tax reference number can only contain whole numbers&quot;},{&quot;validateExpression&quot;:&quot;isCharLengthExactly(this\,10)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Partnership tax reference number must be 10 numbers&quot;}]"
+                                name="textbox_partnershipTaxRefNum"
+                                templateChooser="numerictemplate"
+                                validateExp="runMultipleValidations(this)"
+                                validateExpression="[isNotEmpty(this),isNumeric(this),isCharLengthExactly(this\,10)]"
+                                validateExpressionMessage="[Enter partnership tax reference number,Partnership tax reference number can only contain whole numbers,Partnership tax reference number must be 10 numbers]"/>
+                            <repeatingsection
+                                jcr:created="{Date}2016-06-22T10:41:15.242Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-06-22T10:41:15.242Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/RepeatingSection"
+                                bindRef="/data/statementConsentPartnership/repeatingsection1466592075828"
+                                guideNodeClass="guidePanel"
+                                name="repeatingsection1466592075828">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    nonNavigable="true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <panel
+                                        jcr:created="{Date}2015-06-03T11:54:22.374+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2015-06-03T11:58:59.433+01:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/panel"
+                                        bindRef="/data/statementConsentPartnership/repeatingsection1466592075828/repeatingPanel"
+                                        guideNodeClass="guidePanel"
+                                        maxOccur="5"
+                                        minOccur="1"
+                                        name="repeatingPanel">
+                                        <layout
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                            nonNavigable="true"
+                                            toolbarPosition="Bottom"/>
+                                        <items
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                            <panel1434122275082
+                                                jcr:lastModified="{Date}2015-06-12T16:19:44.785+01:01"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="RepeatHeading"
+                                                sling:resourceType="fd/af/components/panel"
+                                                bindRef="/data/statementConsentPartnership/repeatingsection1466592075828/repeatingPanel/RepeatHeading"
+                                                css="repeating-section-heading-panel"
+                                                guideNodeClass="guidePanel"
+                                                name="RepeatHeading">
+                                                <items
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                                    <heading2
+                                                        jcr:created="{Date}2015-06-12T16:18:30.888+01:00"
+                                                        jcr:createdBy="admin"
+                                                        jcr:lastModified="{Date}2016-06-22T10:42:35.868Z"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/Heading2"
+                                                        _value="&lt;h2>Partner details 1&lt;/h2>&#xa;"
+                                                        guideNodeClass="guideTextDraw"
+                                                        name="heading_noLink_repeatHeading"/>
+                                                    <guidebutton
+                                                        jcr:created="{Date}2015-06-12T16:19:37.885+01:00"
+                                                        jcr:createdBy="admin"
+                                                        jcr:lastModified="{Date}2015-06-22T10:14:18.280+01:00"
+                                                        jcr:lastModifiedBy="admin"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        jcr:title="Remove"
+                                                        sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/guidebutton"
+                                                        assistPriority="custom"
+                                                        buttonSize="button-medium"
+                                                        buttonType="button-default"
+                                                        clickExp="removeRepeat(this.parent.parent.panel,this.parent.parent.panel.instanceIndex)"
+                                                        css="buttonLink"
+                                                        guideNodeClass="guideButton"
+                                                        name="removeButton"
+                                                        type="button"
+                                                        visibleExp="this.parent.parent.panel.instanceManager.instanceCount > 1"/>
+                                                </items>
+                                                <layout
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="/apps/DigitalFormsService/components/layout/repeatingSectionHeading"
+                                                    columns="2"
+                                                    nonNavigable="true"
+                                                    toolbarPosition="Bottom"/>
+                                            </panel1434122275082>
+                                            <textbox
+                                                jcr:created="{Date}2016-06-22T10:41:44.400Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2016-06-27T08:48:36.359Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Partner's name"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                bindRef="/data/statementConsentPartnership/repeatingsection1466592075828/repeatingPanel/textbox1466592104719"
+                                                fieldLength="longField"
+                                                guideNodeClass="guideTextBox"
+                                                keyboard="text"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter partner's name&quot;},{&quot;validateExpression&quot;:&quot;defaultValidation(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Partner's name can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Partner's name can't be more than 100 characters&quot;}]"
+                                                name="textbox1466592104719"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),defaultValidation(this),!isCharLimitReached(this\,100)]"
+                                                validateExpressionMessage="[Enter partner's name,Partner's name can only include letters a to z\, numbers\, spaces\, hyphens and apostrophes,Partner's name can't be more than 100 characters]"/>
+                                            <textbox_1129360744
+                                                jcr:created="{Date}2016-06-22T10:43:43.134Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2016-07-15T10:30:19.729Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Partner's tax reference number"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                bindRef="/data/statementConsentPartnership/repeatingsection1466592075828/repeatingPanel/textbox_partnerTaxRefNum"
+                                                fieldLength="mediumLength"
+                                                guideNodeClass="guideTextBox"
+                                                hintText="This is a 10 digits reference number"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter partner's tax reference number&quot;},{&quot;validateExpression&quot;:&quot;isNumeric(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Partner's tax reference number can only contain whole numbers&quot;},{&quot;validateExpression&quot;:&quot;isCharLengthExactly(this\,10)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Partnership tax reference number must be 10 numbers&quot;}]"
+                                                name="textbox_partnerTaxRefNum"
+                                                templateChooser="numerictemplate"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isNumeric(this),isCharLengthExactly(this\,10)]"
+                                                validateExpressionMessage="[Enter partner's tax reference number,Partner's tax reference number can only contain whole numbers,Partnership tax reference number must be 10 numbers]"/>
+                                            <textbox_1111334297
+                                                jcr:created="{Date}2016-06-22T10:45:22.816Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2016-07-11T13:27:38.448Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Share of profit as adjusted for tax purposes for the year"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                bindRef="/data/statementConsentPartnership/repeatingsection1466592075828/repeatingPanel/textbox_shareProfit"
+                                                fieldLength="mediumLength"
+                                                guideNodeClass="guideTextBox"
+                                                hintText="This is a number with up to 2 decimal places"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter share of profit as adjusted for tax purposes for the year&quot;},{&quot;validateExpression&quot;:&quot;isNumericDecimal(this\, 2)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Share of profit as adjusted for tax purposes for the year can only include a number with up to 2 decimal places&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Share of profit as adjusted for tax purposes for the year can't be more than 100 numbers&quot;}]"
+                                                name="textbox_shareProfit"
+                                                templateChooser="decimaltemplate"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isNumericDecimal(this\, 2),!isCharLimitReached(this\,100)]"
+                                                validateExpressionMessage="[Enter share of profit as adjusted for tax purposes for the year,Share of profit as adjusted for tax purposes for the year can only include a number with up to 2 decimal places,Share of profit as adjusted for tax purposes for the year can't be more than 100 numbers]"/>
+                                            <textbox_584985041
+                                                jcr:created="{Date}2016-06-22T13:49:07.799Z"
+                                                jcr:createdBy="admin"
+                                                jcr:lastModified="{Date}2016-07-11T13:27:56.998Z"
+                                                jcr:lastModifiedBy="admin"
+                                                jcr:primaryType="nt:unstructured"
+                                                jcr:title="Share of deductions from payment and deduction statements"
+                                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                                bindRef="/data/statementConsentPartnership/repeatingsection1466592075828/repeatingPanel/textbox_shareDeductions"
+                                                fieldLength="mediumLength"
+                                                guideNodeClass="guideTextBox"
+                                                hintText="This is a number with up to 2 decimal places"
+                                                multiValidation="[{&quot;validateExpression&quot;:&quot;isNotEmpty(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter share of deductions from payment and deduction statements for the year&quot;},{&quot;validateExpression&quot;:&quot;isNumericDecimal(this\, 2)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Share of deductions from payment and deduction statements can only include a number with up to 2 decimal places&quot;},{&quot;validateExpression&quot;:&quot;!isCharLimitReached(this\,100)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Share of deductions from payment and deduction statements can't be more than 100 numbers&quot;}]"
+                                                name="textbox_shareDeductions"
+                                                templateChooser="decimaltemplate"
+                                                validateExp="runMultipleValidations(this)"
+                                                validateExpression="[isNotEmpty(this),isNumericDecimal(this\, 2),!isCharLimitReached(this\,100)]"
+                                                validateExpressionMessage="[Enter share of deductions from payment and deduction statements for the year,Share of deductions from payment and deduction statements can only include a number with up to 2 decimal places,Share of deductions from payment and deduction statements can't be more than 100 numbers]"/>
+                                        </items>
+                                    </panel>
+                                    <guidebutton
+                                        jcr:created="{Date}2015-06-03T11:55:14.292+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2016-06-22T10:42:48.038Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Add another partner"
+                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/guidebutton"
+                                        assistPriority="custom"
+                                        buttonSize="button-medium"
+                                        buttonType="button-default"
+                                        clickExp="addRepeat(repeatingPanel.panel,&quot;&quot;)"
+                                        css="buttonLink"
+                                        guideNodeClass="guideButton"
+                                        name="addButton"
+                                        type="button"
+                                        visibleExp="repeatingPanel.panel.instanceManager.instanceCount &lt; repeatingPanel.maxOccur"/>
+                                </items>
+                            </repeatingsection>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="1"
+                            nonNavigable="true"
+                            toolbarPosition="Bottom"/>
+                    </page3>
+                    <summary
+                        jcr:description=""
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Summary"
+                        sling:resourceType="fd/af/components/panel"
+                        bindRef="/data/summary"
+                        guideNodeClass="guidePanel"
+                        name="summary">
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/Heading1"
+                                _value="&lt;h1>Summary&lt;/h1>&#xa;"
+                                guideNodeClass="guideTextDraw"
+                                name="summaryHeading"/>
+                            <bodytext
+                                jcr:created="{Date}2016-05-23T07:43:46.505Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2016-05-23T07:44:07.376Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/BodyText"
+                                _value="&lt;p>Check the information you have given is correct before confirming your submission&lt;/p>"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw_checkInfo"/>
+                            <dynamicsummary
+                                jcr:created="{Date}2015-07-13T12:47:06.936+01:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2015-07-13T12:47:06.936+01:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Dynamic Summary"
+                                sling:resourceType="/apps/DigitalFormsService/components/DynamicSummary"
+                                guideNodeClass="guidePanel"
+                                initScript="initialiseDynamicSummary()"
+                                name="dynamicSummary"/>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="1"
+                            nonNavigable="true"
+                            toolbarPosition="Bottom"/>
+                    </summary>
+                    <declaration
+                        jcr:description=""
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Declaration"
+                        sling:resourceType="fd/af/components/panel"
+                        bindRef="/data/declaration"
+                        guideNodeClass="guidePanel"
+                        name="declaration">
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/Heading1"
+                                _value="&lt;h1>Declaration&lt;/h1>"
+                                guideNodeClass="guideTextDraw"
+                                name="declarationHeading"/>
+                            <bodytext
+                                jcr:created="{Date}2015-08-11T14:52:08.357+01:00"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2015-08-11T14:54:15.247+01:00"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/apps/DigitalFormsService/components/6.0_formComponents/Declaration"
+                                _value="&lt;p>&lt;b>By selecting confirm and send you declare that the information you have provided is true and complete.&lt;/b>&lt;/p>&#xa;"
+                                css="infoText"
+                                guideNodeClass="guideTextDraw"
+                                name="textdraw"/>
+                            <emailaddressconfirma
+                                jcr:created="{Date}2015-11-23T09:42:46.064Z"
+                                jcr:createdBy="admin"
+                                jcr:lastModified="{Date}2015-11-23T09:43:00.349Z"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="DigitalFormsService/components/6.0_formComponents/EmailAddressConfirmation"
+                                bindRef="/data/declaration/emailPanel"
+                                css="parentPanel"
+                                guideNodeClass="guidePanel"
+                                name="emailPanel">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout"
+                                    nonNavigable="true"
+                                    toolbarPosition="Bottom"/>
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="fd/af/layouts/gridFluidLayout">
+                                    <bodytext
+                                        jcr:created="{Date}2015-09-30T15:05:08.710+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2015-09-30T15:05:15.375+01:00"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/BodyText"
+                                        _value="&lt;p>If you provide your email address, we'll send you an email containing your unique reference number to confirm your application has been sent.&lt;/p>&#xa;"
+                                        guideNodeClass="guideTextDraw"
+                                        name="textdraw"/>
+                                    <guidetextbox2
+                                        jcr:created="{Date}2015-04-07T17:03:19.419+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2016-07-15T10:11:42.906Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Email address (optional)"
+                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                        assistPriority="custom"
+                                        bindRef="/data/declaration/emailPanel/hide_emailAddress"
+                                        guideNodeClass="guideTextBox"
+                                        keyboard="email"
+                                        multiValidation="[{&quot;validateExpression&quot;:&quot;isEmail(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter a valid email address with no spaces\, like myname@example.com&quot;},{&quot;validateExpression&quot;:&quot;doEntriesMatch(this\, hide_emailAddressConfirm)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Email address must match the entry in 'Confirm email address (optional)'&quot;}]"
+                                        name="hide_emailAddress"
+                                        validateExp="runMultipleValidations(this)"
+                                        validateExpression="[isEmail(this),doEntriesMatch(this\, hide_emailAddressConfirm)]"
+                                        validateExpressionMessage="[Enter a valid email address with no spaces\, like myname@example.com,Email address must match the entry in 'Confirm email address (optional)']"
+                                        valueCommitScript="validateParent(this)"/>
+                                    <guidetextbox
+                                        jcr:created="{Date}2015-04-07T17:03:06.136+01:00"
+                                        jcr:createdBy="admin"
+                                        jcr:lastModified="{Date}2015-11-23T09:45:52.569Z"
+                                        jcr:lastModifiedBy="admin"
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Confirm email address (optional)"
+                                        sling:resourceType="DigitalFormsService/components/6.0_formComponents/TextBox"
+                                        assistPriority="custom"
+                                        bindRef="/data/declaration/emailPanel/hide_emailAddressConfirm"
+                                        guideNodeClass="guideTextBox"
+                                        keyboard="email"
+                                        multiValidation="[{&quot;validateExpression&quot;:&quot;optionalIf(this\, hide_emailAddress)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Confirm your email&quot;},{&quot;validateExpression&quot;:&quot;isEmail(this)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Enter a valid email address with no spaces\, like myname@example.com&quot;},{&quot;validateExpression&quot;:&quot;doEntriesMatch(this\, hide_emailAddress)&quot;\,&quot;validateExpressionMessage&quot;:&quot;Confirm email address must match the entry in 'Email address (optional)'&quot;}]"
+                                        name="hide_emailAddressConfirm"
+                                        validateExp="runMultipleValidations(this)"
+                                        validateExpression="[optionalIf(this\, hide_emailAddress),isEmail(this),doEntriesMatch(this\, hide_emailAddress)]"
+                                        validateExpressionMessage="[Confirm your email,Enter a valid email address with no spaces\, like myname@example.com,Confirm email address must match the entry in 'Email address (optional)']"
+                                        valueCommitScript="validateParent(this)"/>
+                                </items>
+                            </emailaddressconfirma>
+                        </items>
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="fd/af/layouts/gridFluidLayout"
+                            columns="1"
+                            nonNavigable="true"
+                            toolbarPosition="Bottom"/>
+                    </declaration>
+                </items>
+                <toolbar
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Toolbar"
+                    sling:resourceType="fd/af/components/toolbar"
+                    css="upperToolbar"
+                    guideNodeClass="guideToolbar"
+                    name="toolbar">
+                    <items jcr:primaryType="nt:unstructured">
+                        <nextitemnav
+                            jcr:lastModified="{Date}2014-10-21T15:17:38.912+01:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Save and continue"
+                            sling:resourceSuperType="fd/af/components/guidebutton"
+                            sling:resourceType="fd/af/components/actions/nextitemnav"
+                            assistPriority="custom"
+                            buttonType="button-default"
+                            clickExp="pageManager.goToNextPage()"
+                            css="nextButtonHMRC"
+                            guideComponentType="true"
+                            guideNodeClass="guideButton"
+                            name="nextitemnav"
+                            navigationChangeExp="this.visible=this.panel.navigationContext.hasNextItem"
+                            type="moveNext"/>
+                        <SaveAndExitButtonNav
+                            jcr:lastModified="{Date}2014-10-21T15:17:38.912+01:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Save and come back later"
+                            sling:resourceSuperType="fd/af/components/guidebutton"
+                            sling:resourceType="fd/af/components/actions/nextitemnav"
+                            assistPriority="custom"
+                            buttonType="button-informative"
+                            clickExp="pageManager.saveAndExit()"
+                            css="nextButtonHMRC"
+                            guideComponentType="true"
+                            guideNodeClass="guideButton"
+                            name="continueAndExitButtonNav"
+                            navigationChangeExp="this.visible=this.panel.navigationContext.hasNextItem"
+                            type="moveNext"/>
+                        <submit
+                            jcr:lastModified="Fri Oct 10 2014 16:46:05 GMT+0100"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Confirm and send"
+                            sling:resourceSuperType="fd/af/components/guidebutton"
+                            sling:resourceType="fd/af/components/actions/submit"
+                            assistPriority="custom"
+                            buttonType="button-default"
+                            clickExp="pageManager.submitForm();"
+                            guideNodeClass="guideButton"
+                            name="submit"
+                            navigationChangeExp="this.visible = (this.panel.navigationContext.hasNextItem)?false:true"
+                            type="submit"/>
+                        <gosummary_link
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Go to summary"
+                            sling:resourceSuperType="/apps/DigitalFormsService/components/guidelink"
+                            sling:resourceType="/apps/DigitalFormsService/components/actions/gosummary_link"
+                            buttonType="btn"
+                            clickExp="pageManager.goToSummaryPage()"
+                            css="backToSummary"
+                            guideNodeClass="guideButton"
+                            name="gosummary_link"
+                            navigationChangeExp="this.visible=(this.panel.navigationContext.hasNextItem &amp;&amp; pageManager.reachedSummary == true)"
+                            type="goSummary"/>
+                        <goback
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Back"
+                            sling:resourceSuperType="/apps/DigitalFormsService/components/guidelink"
+                            sling:resourceType="/apps/DigitalFormsService/components/actions/goback"
+                            buttonType="btn"
+                            clickExp="pageManager.goToPreviousPage()"
+                            css="navigateBack"
+                            guideNodeClass="guideButton"
+                            name="goback"
+                            navigationChangeExp="this.visible=this.panel.navigationContext.hasPrevItem"
+                            type="goBack"/>
+                    </items>
+                    <layout
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="fd/af/layouts/toolbar/defaultToolbarLayout"/>
+                </toolbar>
+            </rootPanel>
+            <assets jcr:primaryType="nt:unstructured">
+                <xsdRef.xsd/>
+            </assets>
+        </guideContainer>
+    </jcr:content>
+</jcr:root>
